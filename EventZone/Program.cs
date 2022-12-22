@@ -10,7 +10,6 @@ var host = Host.CreateDefaultBuilder()
 
 await host.StartAsync();
 
-
 var userViewService = host.Services
     .GetRequiredService<IUserView>();
 
