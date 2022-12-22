@@ -10,7 +10,7 @@ internal partial class StorageBroker : DbContext, IStorageBroker
         DbContextOptionsBuilder optionsBuilder)
     {
         string connectionString =
-            @"Server=(localdb)\mssqllocaldb;Database=Coworking;Trusted_Connection=true;";
+            @"Server=DESKTOP-6661VFP; Database=Coworking; Trusted_Connection=True; MultipleActiveResultSets=true;TrustServerCertificate=True";
 
         optionsBuilder.UseSqlServer(connectionString);
     }
