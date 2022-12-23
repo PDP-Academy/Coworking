@@ -2,6 +2,6 @@
 
 namespace EventZone.Brokers;
 
-internal partial interface IStorageBroker
+public partial interface IStorageBroker
 {
 }

@@ -2,7 +2,7 @@
 
 namespace EventZone.Brokers;
 
-internal partial interface IStorageBroker
+public partial interface IStorageBroker
 {
     ValueTask<User> InsertUserAsync(User user);
     IQueryable<User> SelectAllUsers();

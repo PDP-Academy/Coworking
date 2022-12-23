@@ -10,8 +10,34 @@ internal class UserService : IUserService
         using var broker = new StorageBroker();
 
         User user = await broker.SelectUserByIdAsync(
-            userId, new List<string> { "Orders" });
+            userId);
 
         return user;
+    }
+
+    public async ValueTask<User> RegistrationUser(User user)
+    {
+        using var broker = new StorageBroker();
+
+        user = await broker.InsertUserAsync(user);
+
+        return user;
+    }
+
+    public async ValueTask<Order> RegistrationOrders(Order order)
+    {
+        using var broker = new StorageBroker();
+        order = await broker.RegistrationOrderAsync(order);
+
+        return order;
+    }
+
+    public async ValueTask<List<Order>> SelectAllOrdersAsync(DateTime day)
+    {
+        using var broker = new StorageBroker();
+
+        var temp = await broker.GetDayOrdersAsync(day);
+
+        return temp;
     }
 }

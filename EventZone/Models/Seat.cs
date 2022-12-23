@@ -1,6 +1,6 @@
 ﻿namespace EventZone.Models;
 
-internal class Seat
+public class Seat
 {
     public int Id { get; set; }
     public int Position { get; set; }

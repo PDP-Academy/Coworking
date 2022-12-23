@@ -2,7 +2,7 @@
 
 namespace EventZone.Models;
 
-internal class Order
+public class Order
 {
     public int Id { get; set; }
     public int UserId { get; set; }
