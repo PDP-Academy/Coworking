@@ -9,4 +9,5 @@ internal interface IUserView
 
     ValueTask PringOrder();
     ValueTask PrintOrdersDay();
+    ValueTask PrintSeatPlas();
 }

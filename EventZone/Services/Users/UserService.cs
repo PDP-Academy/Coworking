@@ -40,4 +40,22 @@ internal class UserService : IUserService
 
         return temp;
     }
+
+    public async ValueTask<Seat> RegistrationSeatAsync(Seat seat)
+    {
+        using var broker = new StorageBroker();
+
+        var temp = await broker.RegistrationSeatAsync(seat);
+
+        return temp;
+    }
+
+    public async ValueTask<List<Seat>> GetSeatAllAsync()
+    {
+        using var broker = new StorageBroker();
+
+        var temp = await broker.GetSeatAsync();
+
+        return temp;
+    }
 }

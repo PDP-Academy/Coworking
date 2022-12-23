@@ -1,6 +1,9 @@
+using EventZone.Models;
+
 namespace EventZone.Brokers;
 
-public interface IStorageBroker_Seat
+public partial interface IStorageBroker
 {
-    
+    ValueTask<Seat> RegistrationSeatAsync(Seat seat);
+    ValueTask<List<Seat>> GetSeatAsync();
 }

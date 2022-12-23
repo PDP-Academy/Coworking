@@ -14,7 +14,9 @@ var userViewService = host.Services
 
 //await userViewService.PrintUser();
 //await userViewService.PrintSignUp();
-await userViewService.PrintOrdersDay();
+//await userViewService.PrintOrdersDay();
+await userViewService.PringOrder();
+//await userViewService.PrintSeatPlas();
 
 static void ConfigureServices(
     HostBuilderContext context,
