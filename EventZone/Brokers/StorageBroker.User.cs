@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 
 namespace EventZone.Brokers;
 
-internal partial class StorageBroker : IStorageBroker
+public partial class StorageBroker : IStorageBroker
 {
     public async ValueTask<User> InsertUserAsync(User user) =>
         await this.InsertAsync(user);

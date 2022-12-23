@@ -4,13 +4,17 @@ using System.Reflection;
 
 namespace EventZone.Brokers;
 
-internal partial class StorageBroker : DbContext, IStorageBroker
+public partial class StorageBroker : DbContext, IStorageBroker
 {
     protected override void OnConfiguring(
         DbContextOptionsBuilder optionsBuilder)
     {
         string connectionString =
-            @"Server=DESKTOP-6661VFP; Database=Coworking; Trusted_Connection=True; MultipleActiveResultSets=true;TrustServerCertificate=True";
+                @"Server=DESKTOP-6661VFP; 
+                Database=Coworking; 
+                Trusted_Connection=True; 
+                MultipleActiveResultSets=true;
+                TrustServerCertificate=True";
 
         optionsBuilder.UseSqlServer(connectionString);
     }
